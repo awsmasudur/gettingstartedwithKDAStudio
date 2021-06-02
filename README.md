@@ -150,7 +150,8 @@ SELECT sensor_data.status,
   FROM sensor_data
  GROUP BY HOP(event_time, INTERVAL '10' second, INTERVAL '1' minute), sensor_data.status;
 
-``
+```
+
 This time, I look at the results in table format:
 
 Notebook screenshot.
