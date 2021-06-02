@@ -1,3 +1,5 @@
+** The source of this example is here: https://aws.amazon.com/blogs/aws/introducing-amazon-kinesis-data-analytics-studio-quickly-interact-with-streaming-data-using-sql-python-or-scala/. In this git project I have just added a few more steps to run the Python code from a Cloud9 environment.
+
 # Getting started with Kinesis Data Analytics Studio
 
 ## Step 1
