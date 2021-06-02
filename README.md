@@ -11,8 +11,7 @@ Data stream name: my-input-stream
 Number of open shards: 2
 
 2. Open the Cloud9 IDE
-3. In the terminal create a file "random_data_generator.py"
-vi random_data_generator.py 
+3. crate a new file from Cloud9 IDE "random_data_generator.py"
 4. Enter the below python code
 
 ```
