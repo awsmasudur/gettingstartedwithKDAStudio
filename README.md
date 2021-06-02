@@ -73,15 +73,15 @@ Then, in the following dialog box, I create an Apache Flink – Studio notebook.
 
 I enter a name (my-notebook) and a description for the notebook. The AWS Identity and Access Management (IAM) permissions to read from the Kinesis data stream I selected earlier (my-input-stream) are automatically attached to the IAM role assumed by the notebook.
 
-Console screenshot.
+![KDA2](image/KDA2.png)
 
 I choose Create to open the AWS Glue console and create an empty database. Back in the Kinesis Data Analytics Studio console, I refresh the list and select the new database. It will define the metadata for my sources and destinations. From here, I can also review the default Studio notebook settings. Then, I choose Create Studio notebook.
 
-Console screenshot.
+![KDA3](image/KDA3.png)
 
 Now that the notebook has been created, I choose Run.
 
-Console screenshot.
+![KDA4](image/KDA4.png)
 
 When the notebook is running, I choose Open in Apache Zeppelin to get access to the notebook and write code in SQL, Python, or Scala to interact with my streaming data and get insights in real time.
 
@@ -134,7 +134,7 @@ On the terminal of my laptop, I start the random_data_generator.py script:
 $ python3 random_data_generator.py
 At first I see a table that contains the data as it comes. To get a better understanding, I select a bar graph view. Then, I group the results by status to see their average current_temperature, as shown here:
 
-Notebook screenshot.
+![KDA5](image/KDA5.png)
 
 As expected by the way I am generating these results, I have different average temperatures depending on the status (OK, WARNING, or ERROR). The higher the temperature, the greater the probability that something is not working correctly with my sensors.
 
@@ -154,13 +154,13 @@ SELECT sensor_data.status,
 
 This time, I look at the results in table format:
 
-Notebook screenshot.
+![KDA6](image/KDA6.png)
 
 To send the result of the query to a destination stream, I create a table and connect the table to the stream. First, I need to give permissions to the notebook to write into the stream.
 
 In the Kinesis Data Analytics Studio console, I select my-notebook. Then, in the Studio notebooks details section, I choose Edit IAM permissions. Here, I can configure the sources and destinations used by the notebook and the IAM role permissions are updated automatically.
 
-Console screenshot.
+![KDA7](image/KDA7.png)
 
 In the Included destinations in IAM policy section, I choose the destination and select my-output-stream. I save changes and wait for the notebook to be updated. I am now ready to use the destination stream.
 
@@ -205,10 +205,10 @@ First, I create a SensorsApp note in my notebook and copy the statements that I 
 
 Then, from the menu at the top right of my notebook, I choose Build SensorsApp and export to Amazon S3 and confirm the application name.
 
-Notebook screenshot.
+![KDA8](image/KDA8.png)
 
 When the export is ready, I choose Deploy SensorsApp as Kinesis Analytics application in the same menu. After that, I fine-tune the configuration of the application. I set parallelism to 1 because I have only one shard in my input Kinesis data stream and not a lot of traffic. Then, I run the application, without having to write any code.
 
 From the Kinesis Data Analytics applications console, I choose Open Apache Flink dashboard to get more information about the execution of my application.
 
-Apache Flink console screenshot.
+![KDA9](image/KDA9.png)
