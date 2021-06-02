@@ -11,7 +11,7 @@
 pip install boto3
 ```
 
-## Step 2 - working with Kinesis Data Streams
+## Step 2 - working with Kinesis Data Streams and Kinesis Data Analytics Studio
 1. Create a new Kinesis Data Streams https://console.aws.amazon.com/kinesis
 Data stream name: my-input-stream
 Number of open shards: 2
