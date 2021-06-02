@@ -67,7 +67,7 @@ This script sends random records to my Kinesis data stream using JSON syntax. Fo
 
 From the Kinesis console, I select a Kinesis data stream (my-input-stream) and choose Process data in real time from the Process drop-down. In this way, the stream is configured as a source for the notebook.
 
-Console screenshot.
+![KDA1](image/KDA1.png)
 
 Then, in the following dialog box, I create an Apache Flink – Studio notebook.
 
